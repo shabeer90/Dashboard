@@ -15,7 +15,7 @@ Enabling users to see patterns, explore trends and understand the insight living
   - LESS
   - Bootstrap
   
-##### Structure Overview 
+##### Dashboard code structure overview 
 The code that builds the chart is in folder `retailer_x/js/`. I have used `RequireJS` to Modularize my code. `main.js` takes care of initializes the charts on the Dashboard page, and loads all relevent JavaScript on the page.
 
 The `views` take care of drawing the charts on the page. 
@@ -33,3 +33,16 @@ The `views` take care of drawing the charts on the page.
     - SupplierServiceView.js
 + PriceChangeBaseView.js
   + PriceChangeView.js
+
+The `models` take care of loading the JSON file, extracting chart specific JSON objects.
++ CasesShorted
++ Performance
+  - PerformanceModel.js
+    - AvailabilityModel.js
+    - DepotServiceModel.js
+    - SupplierServiceModel.js
++ Sales
+  - DailySalesModel.js
+  - MonthlySalesModel.js
++ DashboardConfig.js
++ PriceChangeModel.js
