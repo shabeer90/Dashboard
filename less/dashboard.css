@@ -1,0 +1,170 @@
+/*
+ * Dashboard Top Row [Header Text Line, Filter, Zoom and FAQ visibility button]
+ */
+#alerts-dash {
+  display: none;
+}
+#alerts-dash-msg {
+  display: none;
+  text-align: center;
+}
+/*
+ *  Dashboard Tiles column, Middle Main Chart and Weekly Charts column
+ */
+.negative_figure {
+  color: #cb2027 !important;
+  font-weight: 200;
+}
+.neutral_figure {
+  color: #265dab !important;
+  font-weight: 200;
+}
+.positive_figure {
+  color: #60bd68 !important;
+  font-weight: 200;
+}
+.minibox-percent {
+  padding-left: 0px;
+}
+.dashboard-header-date {
+  font-size: 21px;
+  margin-bottom: 5px;
+  margin-top: 1px;
+}
+/*
+*
+* DASHBOARD PAGE
+*
+*
+*/
+.sales-stats {
+  font-weight: 500;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sales-stats span {
+  color: #265dab;
+  display: block;
+  font-size: 25px;
+  font-weight: 200;
+}
+.sales-stats li {
+  display: inline-block;
+  width: 100%;
+}
+.sales-stats li span {
+  color: inherit;
+  font-size: 15px;
+}
+.performance {
+  height: 190px;
+}
+.performance .performance-body .panel-body {
+  padding: 10px;
+}
+.performance .performance-body .performance-chart {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+.performance header {
+  height: 20px;
+  padding: 10px;
+}
+.performance header .heading {
+  text-transform: uppercase;
+}
+.performance .minibox-percent {
+  margin-top: 30px;
+  text-align: center;
+}
+.performance .minibox-percent h2 {
+  margin-bottom: 1px;
+}
+.performance .minibox-percent h2 span {
+  font-size: 65%;
+}
+.dash-summary span {
+  display: inline;
+  font-weight: 200;
+}
+.date-callout {
+  padding: 10px !important;
+  margin-top: 0 !important;
+}
+.mini-stat {
+  padding: 20px 20px 20px 15px !important;
+}
+.mini-stat-icon {
+  margin-right: 7px !important;
+}
+/*
+ *
+ * Caret signs
+ *
+ */
+.caret-down {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  margin-bottom: -14px;
+  margin-left: 25%;
+  width: 0;
+  border-top: 4px solid #cb2027;
+}
+.caret-up {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  margin-bottom: -14px;
+  margin-left: 25%;
+  width: 0;
+  border-bottom: 4px solid #60bd68;
+}
+.dataTables_length {
+  float: left;
+  width: 40%;
+}
+.dataTables_filter {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+.dataTables_info {
+  float: left;
+  width: 60%;
+}
+.paginate_disabled_previous,
+.paginate_enabled_previous,
+.paginate_disabled_next,
+.paginate_enabled_next {
+  color: #111 !important;
+  cursor: pointer;
+  float: left;
+  height: 19px;
+}
+.paginate_disabled_previous:hover,
+.paginate_enabled_previous:hover,
+.paginate_disabled_next:hover,
+.paginate_enabled_next:hover {
+  text-decoration: none !important;
+}
+.paginate_disabled_previous:active,
+.paginate_enabled_previous:active,
+.paginate_disabled_next:active,
+.paginate_enabled_next:active {
+  outline: medium none;
+}
+.paginate_disabled_previous,
+.paginate_disabled_next {
+  color: #666 !important;
+}
+.paginate_disabled_previous,
+.paginate_enabled_previous {
+  padding-left: 23px;
+}
+.paginate_disabled_next,
+.paginate_enabled_next {
+  margin-left: 10px;
+  padding-right: 23px;
+}

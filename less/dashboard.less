@@ -1,0 +1,257 @@
+@LightGrey : #DDDDDD;
+@FadedGrey : #939393;
+@MediumGrey : #CCCCCC;
+@DarkGrey : #333333;
+@White : #FFFFFF;
+@GreyWhite : #f7f7f7;
+
+@NegativeRed : #CB2027;
+@FadedNegativeRed : #ef9ea1;
+
+@NeutralBlue : #265DAB;
+@FadedNeutralBlue: #8eb2e5;
+
+@PositiveGreen: #60BD68;
+
+@AtheonGrey : #555555;
+
+@skuBlue: #009ed9;
+
+/*
+ * Dashboard Top Row [Header Text Line, Filter, Zoom and FAQ visibility button]
+ */
+
+#alerts-dash {
+  display: none;
+}
+
+#alerts-dash-msg {
+  display: none;
+  text-align: center;
+}
+
+/*
+ *  Dashboard Tiles column, Middle Main Chart and Weekly Charts column
+ */
+.figure(@color) {
+  color: @color !important;
+  font-weight: 200;
+}
+
+.negative_figure {
+  .figure(@NegativeRed)
+}
+
+.neutral_figure {
+  .figure(@NeutralBlue)
+}
+
+.positive_figure {
+  .figure(@PositiveGreen)
+}
+
+.minibox-percent {
+  padding-left: 0px;
+}
+
+.dashboard-header-date {
+  font-size: 21px;
+  margin-bottom: 5px;
+  margin-top: 1px;
+}
+
+/*
+*
+* DASHBOARD PAGE
+*
+*
+*/
+
+.sales-stats {
+  font-weight: 500;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    color: @NeutralBlue;
+    display: block;
+    font-size: 25px;
+    font-weight: 200;
+  }
+
+  li {
+    display: inline-block;
+    width: 100%;
+
+    span {
+      color: inherit;
+      font-size: 15px;
+    }
+  }
+}
+
+//	Performance charts start
+.performance {
+  height: 190px;
+
+  .performance-body {
+    .panel-body {
+      //      padding: 10px 0 0 10px;
+      padding: 10px;
+    }
+    .performance-chart {
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+  }
+  header {
+    height: 20px;
+    padding: 10px;
+    .heading {
+      text-transform: uppercase;
+    }
+  }
+  .minibox-percent {
+    margin-top: 30px;
+    text-align: center;
+    h2 {
+      margin-bottom: 1px;
+      span {
+        font-size: 65%;
+      }
+    }
+  }
+}
+
+// DASHBOARD PAGE TOP SUMMARY BOXES
+.dash-summary {
+  span {
+    display: inline;
+    font-weight: 200;
+  }
+}
+
+.date-callout {
+  padding: 10px !important;
+  margin-top: 0 !important;
+}
+
+.mini-stat {
+  padding: 20px 20px 20px 15px !important;
+}
+
+.mini-stat-icon {
+  margin-right: 7px !important;
+}
+
+/*
+ *
+ * Caret signs
+ *
+ */
+.caret() {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  content: "";
+  margin-bottom: -14px;
+  margin-left: 25%;
+  width: 0;
+}
+
+.caret-down {
+  .caret(); //  Inherit Caret Styles
+  border-top: 4px solid @NegativeRed;
+}
+
+.caret-up {
+  .caret(); //  Inherit Caret Styles
+  border-bottom: 4px solid @PositiveGreen;
+}
+
+.dataTables_length {
+  float: left;
+  width: 40%;
+}
+
+.dataTables_filter {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+.dataTables_info {
+  float: left;
+  width: 60%;
+}
+
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+  color: #111 !important;
+  cursor: pointer;
+  float: left;
+  height: 19px;
+}
+
+.paginate_disabled_previous:hover, .paginate_enabled_previous:hover, .paginate_disabled_next:hover, .paginate_enabled_next:hover {
+  text-decoration: none !important;
+}
+
+.paginate_disabled_previous:active, .paginate_enabled_previous:active, .paginate_disabled_next:active, .paginate_enabled_next:active {
+  outline: medium none;
+}
+
+.paginate_disabled_previous, .paginate_disabled_next {
+  color: #666 !important;
+}
+
+.paginate_disabled_previous, .paginate_enabled_previous {
+  padding-left: 23px;
+}
+
+.paginate_disabled_next, .paginate_enabled_next {
+  margin-left: 10px;
+  padding-right: 23px;
+}
+
+/*
+* scroll to wrapper
+*/
+.scroll-top-wrapper , .scroll-bottom-wrapper {
+  position: fixed;
+//  opacity: 0;
+//  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  z-index: 99999999;
+  background-color: #777777;
+  color: #eeeeee;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  right: 30px;
+  bottom: 20px;
+  padding-top: 2px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #888888;
+    cursor: pointer;
+  }
+
+  .show {
+    visibility: visible;
+    cursor: pointer;
+    opacity: 1.0;
+  }
+  i.fa {
+    line-height: inherit;
+  }
+}
